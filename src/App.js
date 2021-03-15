@@ -1,22 +1,24 @@
 import React, { useState } from "react";
 import './App.css';
-import Main from './components/Main.js'
+import Main from './components/Main';
+import HandleException from './components/HandleException';
+import Error from './components/Error';
 import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
 } from "react-router-dom";
 
 function App() {
   return (
     <div>
-      <Main />
+      <Router>
       <Switch>
-          <Route path="/404">
-            <About />
-          </Route>
-        </Switch>
+          <Route exact component={Main} path="/" ></Route>
+          <Route path="/404" component={HandleException}></Route>
+          <Route path="/401" component={Error}></Route>
+      </Switch>
+      </Router>
     </div>
   );
 }

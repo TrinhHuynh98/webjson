@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 
-const HandleException = () => {
+const Error = () => {
 return (
     <div>
     
       <p>
-          404 PAGE NOT FOUND
+          ERROR 401
       </p>
     
     </div>
   );
 };
-export default HandleException;
+export default Error;
 
